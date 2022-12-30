@@ -1,0 +1,146 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title" : "Documentação para Teste-BackEnd",
+        "version" : "1.0.0"
+    },
+    "components":{
+        "securitySchemes":{
+            "basicAuth":{
+                "type": "http",
+                "scheme": "basic"
+            }
+        }
+    },
+   "basePath" : "/",
+   "paths":{
+        "/usuario/cadastrar": {
+            "post": {
+                "tags": ["Usuarios"],
+                "security": [{"basicAuth": []}],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nomeUsuario": {
+                                        "type": "string"
+                                    },
+                                    "senhaUsuario": {
+                                        "type": "string"
+                                    }
+                                },
+                                "example": {
+                                    "nomeUsuario": "Nice Planet",
+                                    "senhaUsuario": "admin123"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {}
+            }
+        },
+        "/produtor/cadastrar": {
+            "post": {
+                "tags": ["Produtor"],
+                "security": [{"basicAuth": []}],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nomeProdutor": {
+                                        "type": "string"
+                                    },
+                                    "cpfProdutor": {
+                                        "type": "string"
+                                    },
+                                    "idUsuario": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "example": {
+                                    "nomeProdutor": "Nice Planet",
+                                    "cpfProdutor": "12345678",
+                                    "idUsuario": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {}
+            }
+        },
+        "/propriedade/cadastrar": {
+            "post": {
+                "tags": ["Propriedades"],
+                "security": [{"basicAuth": []}],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nomePropriedade": {
+                                        "type": "string"
+                                    },
+                                    "registroRural": {
+                                        "type": "string"
+                                    },
+                                    "idProdutor":{
+                                        "type": "integer"
+                                    },
+                                    "idUsuario": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "example": {
+                                    "nomePropriedade": "Nice Planet",
+                                    "cadastroRural": "12345678",
+                                    "idProdutor": "1",
+                                    "idUsuario": "1"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {}
+            }
+        },
+        "/propriedade/listar": {
+            "get": {
+                "tags": ["Propriedades"],
+                "security": [{"basicAuth": []}],
+                "parameters": [
+                    {
+                      "in": "query",
+                      "name": "idPropriedade",
+                      "type": "integer",
+                      "required": true
+                    }
+                  ],
+                "responses": {}
+                
+            }
+        },
+        "/produtor/listar": {
+            "get": {
+                "tags": ["Produtor"],
+                "security": [{"basicAuth": []}],
+                "parameters": [
+                    {
+                      "in": "query",
+                      "name": "idProdutor",
+                      "type": "integer",
+                      "required": true
+                    }
+                  ],
+                "responses": {}
+                
+            }
+        }
+    }
+} 

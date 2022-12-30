@@ -3,8 +3,12 @@ const usuario = require('../routes/usuario.js') //importa o código para as rota
 const produtor = require('../routes/produtor.js')   //
 const propriedade = require('../routes/propriedade.js') //
 const app = require('../config/config.js')  //importa algumas dependências e configurações do Body Parser
-const basicAuth = require('../config/login')
+const basicAuth = require('../config/login.js')
+const swagger = require('swagger-ui-express')
+const swaggerDocument = require('../../swagger.json')
 
+
+app.use('/rotas', swagger.serve, swagger.setup(swaggerDocument))
 app.use(basicAuth)
 app.use('/propriedade', propriedade)    //estabelece o uso das rotas de propriedade,usuario e pordutor, respectivamente
 app.use('/usuario', usuario)    //

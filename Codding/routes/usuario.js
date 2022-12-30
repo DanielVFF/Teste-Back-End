@@ -24,7 +24,7 @@ router.post('/cadastrar',(req,res,next)=>{ //Inserir Novo Usuário
                 }
                 res.status(201).send({//Retorna mensagem positiva e o id Inserido
                     mensagem: "Usuário Criado",
-                    idUsuario: result
+                    idUsuario: result.insertId
                 })
             }
         )

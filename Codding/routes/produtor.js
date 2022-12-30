@@ -25,7 +25,7 @@ router.post('/cadastrar',(req,res,next)=>{ //Inserir Novo Usuário
                         }
                         res.status(201).send({//Retorna mensagem positiva e o id Inserido
                             mensagem: "Produtor Cadastrado",
-                            idProdutor: result.insertId
+                            idProdutor: result
                         })
                     }
                 )
@@ -37,24 +37,21 @@ router.post('/cadastrar',(req,res,next)=>{ //Inserir Novo Usuário
 /*LISTAR PRODUTORES POR IDPRODUTOR*/
 router.get('/listar',(req,res,next)=>{
     mysql.getConnection((err,con)=>{
-        if(err){
+        if(err){    //Tratativa de Erro
             res.send({
                 error: err
             })
         }mysql.query(
-            'SELECT * FROM produtores where idProdutor = (?)',
-            [req.body.idProdutor],
+            'SELECT * FROM produtores where idProdutor = (?)',//Busca na tabela produtores com base na query idProdutor
+            [req.query.idProdutor],
             (err,result,fields)=>{
-                if(err){
+                if(err){    //Tratativa de Erro
                     res.send({
                         error: err
                     })
                 }
-            if(true===false){
-                res.send('Insira os dados novamente')
-            }res.send(result)
+                res.send(result[0]) //Retorna o resultado da Busca
         })
-
     })
 })
 

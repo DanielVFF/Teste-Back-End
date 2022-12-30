@@ -14,13 +14,14 @@ router.get('/listar',(req,res,next)=>{
             })
         }mysql.query(
             'SELECT * FROM propriedades where idPropriedade = (?)',
-            [req.body.idPropriedade],
+            [req.query.idPropriedade],
             (err,result,fields)=>{
-            if(err){
+            if(err){    //Retorna o Erro
                 res.send({
                     error: err
                 })
-            }res.send({result})
+            }console.log(req.query.idPropriedade)
+            res.send(result[0])  //Retorna o resultado da busca
             })
 
     })
@@ -71,16 +72,16 @@ router.patch('/alterar',(req,res,next) =>{
             "UPDATE propriedades SET nomePropriedade = (?),cadastroRural = (?) WHERE idPropriedade = (?)",
             [req.body.nomePropriedade, req.body.cadastroRural, req.body.idPropriedade],
             (err,result,fields)=>{
-                if(err){
+                if(err){//Tratativa de Erro
                     res.send({
                         error : err
                     })
                 }
-                res.send({
+                res.status(200).send({
                     mensagem : "Propriedade Alterada",
                     novoNomePropriedade : req.body.nomePropriedade,
                     novoCadastroRural: req.body.cadastroRural
-                })//INSERIR STATUS!!!!!!!!!!!!!!!!!
+                })
             })
     })
 })
