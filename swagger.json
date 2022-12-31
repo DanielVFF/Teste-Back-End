@@ -57,15 +57,11 @@
                                     },
                                     "cpfProdutor": {
                                         "type": "string"
-                                    },
-                                    "idUsuario": {
-                                        "type": "integer"
                                     }
                                 },
                                 "example": {
                                     "nomeProdutor": "Nice Planet",
-                                    "cpfProdutor": "12345678",
-                                    "idUsuario": "1"
+                                    "cpfProdutor": "12345678"
                                 }
                             }
                         }
@@ -92,16 +88,12 @@
                                     },
                                     "idProdutor":{
                                         "type": "integer"
-                                    },
-                                    "idUsuario": {
-                                        "type": "integer"
                                     }
                                 },
                                 "example": {
                                     "nomePropriedade": "Nice Planet",
                                     "cadastroRural": "12345678",
-                                    "idProdutor": "1",
-                                    "idUsuario": "1"
+                                    "idProdutor": "1"
                                 }
                             }
                         }
