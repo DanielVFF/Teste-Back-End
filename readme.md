@@ -31,7 +31,7 @@ Caso haja algum erro na execução do servidor você tmabém pode baixar o aplic
 
     https://www.apachefriends.org/pt_br/download.html
     
-Após isso é necessário abrir o MySQL WORKBENCH e conectar um servidor com as configurações padrão e USANDO A SENHA "12345"
+Após isso é necessário abrir o MySQL WORKBENCH e conectar um servidor com as configurações padrão e USANDO A SENHA "12345", caso seja alterada, o código deverá ser alterado
 
 ![Captura de tela_20221230_182703](https://user-images.githubusercontent.com/114309972/210112995-64f149ad-a10c-4c72-83a8-4d68715dd8ff.png)
 
