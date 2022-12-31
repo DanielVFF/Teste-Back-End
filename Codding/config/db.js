@@ -1,4 +1,4 @@
-const mysql = require('mysql');    //estabelece a dependencia com a biblioteca mysql2
+const mysql = require('mysql2');    //estabelece a dependencia com a biblioteca mysql2
 
 let pool = mysql.createPool({   //cria um pool de conexões
         'user': 'root',
