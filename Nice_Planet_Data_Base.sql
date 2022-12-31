@@ -32,7 +32,7 @@ CREATE TABLE `produtores` (
   PRIMARY KEY (`idProdutor`),
   UNIQUE KEY `nomeProdutor_UNIQUE` (`nomeProdutor`),
   UNIQUE KEY `cpfProdutor_UNIQUE` (`cpfProdutor`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,6 +56,7 @@ CREATE TABLE `propriedades` (
   `nomePropriedade` varchar(45) NOT NULL,
   `cadastroRural` int NOT NULL,
   `idProdutor` varchar(45) NOT NULL,
+  `idUsuario` int NOT NULL,
   PRIMARY KEY (`idPropriedade`),
   UNIQUE KEY `nomePropriedade_UNIQUE` (`nomePropriedade`),
   UNIQUE KEY `cadastroRural_UNIQUE` (`cadastroRural`)
@@ -107,4 +108,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-30 22:33:41
+-- Dump completed on 2022-12-30 23:54:31
