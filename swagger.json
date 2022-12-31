@@ -32,7 +32,7 @@
                                     }
                                 },
                                 "example": {
-                                    "nomeUsuario": "Nice Planet",
+                                    "nomeUsuario": "Nice_Planet",
                                     "senhaUsuario": "admin123"
                                 }
                             }
