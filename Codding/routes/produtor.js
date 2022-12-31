@@ -1,6 +1,6 @@
-const express = require('express')
+const express = require('express')//Estabelece dependência com o express e seu modulador de rotas
 const router = express.Router()
-const mysql = require('../config/db').pool
+const mysql = require('../config/db').pool//Estabelece depencia com a pool de conexões do banco de dados
 
 
 
@@ -55,36 +55,5 @@ router.get('/listar',(req,res,next)=>{
     })
 })
 
-/*
-//ALTERAR NOME DO PRODUTOR E CPF DO PRODUTOR POR IDPRODUTOR
-router.patch('/alterar',(req,res,next) =>{
-    mysql.getConnection((err,con)=>{
-        if(err){
-            res.send({
-                error : err
-            })
-        }else if(req.body.idProdutor){
-            res.send({
-                error : "insira o idProdutor"
-            })
-        }
-        con.query(
-            "UPDATE produtores SET nomeProdutor = (?),cpfProdutor = (?) WHERE idProdutor = (?)",
-            [req.body.nomeProdutor, req.body.cpfProdutor, req.body.idProdutor],
-            (err,result,fields)=>{
-                if(err){
-                    res.send({
-                        error : err
-                    })
-                }
-                res.send({
-                    mensagem : "Dados do Produtor Alterados",
-                    novoNomeProdutor : req.body.nomeProdutor,
-                    novoCpfProdutor: req.body.cpfProdutor
-                })//INSERIR STATUS!!!!!!!!!!!!!!!!!
-            })
-    })
-})*/
 
-
-module.exports = router
+module.exports = router//Exporta as rotas

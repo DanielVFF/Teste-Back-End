@@ -1,6 +1,6 @@
-const express = require('express')
+const express = require('express')//Estabelece dependência com o express e seu modulador de rotas
 const router = express.Router()
-const mysql = require('../config/db').pool
+const mysql = require('../config/db').pool//Estabelece depencia com a pool de conexões do banco de dados
 
 
 
@@ -60,29 +60,5 @@ router.post('/cadastrar',(req,res,next)=>{ //Inserir Nova Propriedade
     )     
 })
 
-//ALTERAR NOME DA PROPRIEDADE E CADASTRO RUAL POR IDPROPRIEDADE
-router.patch('/alterar',(req,res,next) =>{
-    mysql.getConnection((err,con)=>{
-        if(err){
-            res.send({
-                error : err
-            })
-        }
-        con.query(
-            "UPDATE propriedades SET nomePropriedade = (?),cadastroRural = (?) WHERE idPropriedade = (?)",
-            [req.body.nomePropriedade, req.body.cadastroRural, req.body.idPropriedade],
-            (err,result,fields)=>{
-                if(err){//Tratativa de Erro
-                    res.send({
-                        error : err
-                    })
-                }
-                res.status(200).send({
-                    mensagem : "Propriedade Alterada",
-                    novoNomePropriedade : req.body.nomePropriedade,
-                    novoCadastroRural: req.body.cadastroRural
-                })
-            })
-    })
-})
-module.exports = router
+
+module.exports = router//Exporta as rotas

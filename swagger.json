@@ -141,6 +141,22 @@
                 "responses": {}
                 
             }
+        },
+        "/usuario/listar": {
+            "get": {
+                "tags": ["Usuarios"],
+                "security": [{"basicAuth": []}],
+                "parameters": [
+                    {
+                      "in": "query",
+                      "name": "idUsuario",
+                      "type": "integer",
+                      "required": true
+                    }
+                  ],
+                "responses": {}
+                
+            }
         }
     }
 } 
