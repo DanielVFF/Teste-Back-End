@@ -31,10 +31,12 @@ router.post('/cadastrar',(req,res,next)=>{ //Inserir Novo Usuário
                                     }
                                     res.status(201).send({//Retorna mensagem positiva e o id Inserido
                                         mensagem: "Produtor Cadastrado",
-                                        idProdutor: result
+                                        idProdutor: result.insertId
                                     })
                                 }
                             )
+                        }else{
+                            res.send("Erro desconhecido")
                         }
                 }
                 })
