@@ -8,15 +8,15 @@ A principal linguagem de programação utilizada é Javascript, utilizanado o No
 Após isso utilizaremos alguns pacotes da biblioteca do Node.js(NPM) e,portanto, devemos utilizar os seguintes códigos no terminal do Visual Studio(Recomendado), com a pasta do repositório aberta:
 
 
-    npm intall body-parser          //Utilizado para podermos usar alguns arquivos body de respostas em JSON
+    npm install body-parser          //Utilizado para podermos usar alguns arquivos body de respostas em JSON
 
-    npm intall express              //Utilizado para estabelecer as rotas
+    npm install express              //Utilizado para estabelecer as rotas
 
-    npm intall mysql2               //Utilizado para nos conectarmos com a base de dados
+    npm install mysql2               //Utilizado para nos conectarmos com a base de dados
 
-    npm intall basic-auth           //Utilizado para fazer a Autenticação
+    npm install basic-auth           //Utilizado para fazer a Autenticação
 
-    npm intall swagger-ui-express   //Utilizado para documentar as rotas   
+    npm install swagger-ui-express   //Utilizado para documentar as rotas   
     
     npm install bcrypt              //Utilizado para criptografar as senhas
   
