@@ -5,20 +5,8 @@ A principal linguagem de programação utilizada é Javascript, utilizanado o No
 
     https://nodejs.org/en/download/
 
-Após isso utilizaremos alguns pacotes da biblioteca do Node.js(NPM) e,portanto, devemos utilizar os seguintes códigos no terminal do Visual Studio(Recomendado), com a pasta do repositório aberta:
-
-
-    npm install body-parser          //Utilizado para podermos usar alguns arquivos body de respostas em JSON
-
-    npm install express              //Utilizado para estabelecer as rotas
-
-    npm install mysql2               //Utilizado para nos conectarmos com a base de dados
-
-    npm install basic-auth           //Utilizado para fazer a Autenticação
-
-    npm install swagger-ui-express   //Utilizado para documentar as rotas   
-    
-    npm install bcrypt              //Utilizado para criptografar as senhas
+Após isso utilizaremos alguns pacotes da biblioteca do Node.js(NPM) e,portanto, devemos utilizar o seguinte código no terminal do Visual Studio(Recomendado), com a pasta do repositório aberta para instalar as dependencias(body-parser, express, mysql2, basic-auth, swagger-ui-express, bcrypt):
+    npm i
   
 
 É ESSENCIAL A INSTALAÇÃO DE TODOS OS PACOTES ANTES DE INICIAR A APLICAÇÃO
@@ -36,23 +24,14 @@ Após isso é necessário abrir o MySQL WORKBENCH e conectar um servidor com as 
 ![Captura de tela_20221230_182703](https://user-images.githubusercontent.com/114309972/210112995-64f149ad-a10c-4c72-83a8-4d68715dd8ff.png)
 
 
-
-
-
-
-
-
-
-
-    
-Enfim, para iniciar a aplicação você deve abrir a pasta do repositório com o Visual  digitará os seguintes código no terminal do Visual Studios:
+## Enfim, para iniciar a aplicação você deve abrir a pasta do repositório com o Visual  digitará os seguintes código no terminal do Visual Studios:
 
     cd Codding
     cd server
     node index.js
     
     
-Para acessar as diferentes rotas que a aplicação disponibiliza você deve acessar o seguinte acessar o seu localhost com na seguinte rota:
+## Para acessar as diferentes rotas que a aplicação disponibiliza você deve acessar o seguinte acessar o seu localhost com na seguinte rota:
 
     http://localhost:3000/rotas/
 

@@ -1,8 +1,9 @@
 const mysql = require('mysql2');    //estabelece a dependencia com a biblioteca mysql2
 
 let pool = mysql.createPool({   //cria um pool de conexões
+        "connectionLimit": 100,
         'user': 'root',
-        'password': '12345',
+        'password': 'DanielVitor22!',
         'database': 'niceplanet',
         'host': 'localhost',
         'port': 3306    //porta padrão do MySql

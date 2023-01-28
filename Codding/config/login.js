@@ -21,8 +21,10 @@ const basicAuth = (req,res,next)=>{
                 if(comparacao&&user.name==nome){//Caso esteja correto o usuário pode continuar a request
                     next()
                     break
+                }else if(user.name==nome&&!comparacao){
+                    res.status(403).send("Acesso Negado")
                 }else if(i==result.length){//Caso nenhuma senha e usuário estejam corretas o sistema retorna que o acesso foi negado
-                    res.status(401).send('Acesso Negado')
+                    res.status(403).send('Acesso Negado')
                     break
                 }                
                 }

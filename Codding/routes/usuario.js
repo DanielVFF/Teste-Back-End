@@ -50,8 +50,11 @@ router.get('/listar',(req,res,next)=>{
                     res.send({
                         error: err
                     })
-                }
-                res.send(result[0]) //Retorna o resultado da busca
+                }else if(!result[0]){
+                    res.send("Não encontrado")
+                }else{
+                    res.send(result[0])
+                } //Retorna o resultado da busca
         })
     })
 })
